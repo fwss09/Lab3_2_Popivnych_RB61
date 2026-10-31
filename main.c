@@ -50,7 +50,7 @@ int main() {
     printf("f(a) = %lf, f(b) = %lf\n", func(a), func(b));
     printf("f'(a) = %lf, f'(b) = %lf\n", dfunc(a), dfunc(b));
 
-    // перевірка умови
+    // перевірка чи мають значення функції в точках a та b різні знаки
     if (func(a) * func(b) >= 0) {
         printf("f(a) and f(b) must have opposite signs!\n");
         return 0;
@@ -60,7 +60,7 @@ int main() {
     printf("enter eps: ");
     scanf("%lf", &eps);
 
-    // перевірка точності обчислень eps
+    // перевірка коректності заданої точності
     if (eps <= 0) {
         printf("eps must be > 0\n");
         return 0;
